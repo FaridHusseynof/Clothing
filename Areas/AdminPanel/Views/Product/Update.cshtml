@@ -1,0 +1,48 @@
+﻿@model UpdateVM
+
+<div class="row">
+    <div class="col-md-6 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Create form</h4>
+
+                <form class="forms-sample" method="post" enctype="multipart/form-data">
+                    <input type="hidden" asp-for="id_"/>
+                    <div class="form-group">
+                        <label asp-for="title">Enter title</label>
+                        <input asp-for="title" type="text" class="form-control" placeholder="Title">
+                        <span class="text-danger" style="color:red;" asp-validation-for="title"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="description">Enter description</label>
+                        <input class="form-control" asp-for="description" placeholder="Description">
+                        <span class="text-danger" style="color:red;" asp-validation-for="description"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="price">Enter price</label>
+                        <input class="form-control" asp-for="price" placeholder="Price">
+                        <span class="text-danger" style="color:red;" asp-validation-for="price"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="review">Enter review</label>
+                        <input class="form-control" asp-for="review" placeholder="Review">
+                        <span class="text-danger" style="color:red;" asp-validation-for="review"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="imageFile">Enter image</label>
+                        <input type="file" class="form-control" asp-for="imageFile" placeholder="Image">
+                        <span class="text-danger" style="color:red;" asp-validation-for="imageFile"></span>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary me-2">Submit</button>
+                    <a class="btn btn-light" asp-action="Index" asp-controller="Product">Cancel</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
